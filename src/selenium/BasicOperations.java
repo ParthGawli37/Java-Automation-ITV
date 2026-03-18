@@ -11,7 +11,7 @@ public class BasicOperations {
 
 	public static void main(String[] args) {
 				//Setting the chrome driver path for Java project to locate
-				System.setProperty("webdriver.chrome.driver", "C:\\Users\\parth\\chromedriver-win64\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\parth\\Browser_WebDrivers\\chromedriver-win64\\chromedriver.exe");
 				
 				WebDriver driver = new ChromeDriver();
 				
@@ -20,9 +20,9 @@ public class BasicOperations {
 				//
 				driver.get("https://testautomationpractice.blogspot.com/");
 				
-//				WebElement edtName = driver.findElement(By.id("name"));
-//				edtName.clear();
-//				edtName.sendKeys("Parth");
+				WebElement edtName = driver.findElement(By.id("name"));
+				edtName.clear();
+				edtName.sendKeys("Parth");
 //
 //				WebElement edtName = driver.findElement(By.cssSelector("#name"));
 //				WebElement edtName = driver.findElement(By.xpath(""));

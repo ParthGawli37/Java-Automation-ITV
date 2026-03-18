@@ -11,7 +11,7 @@ public class AdvanceOperatios {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Setting the chrome driver path for Java project to locate
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\parth\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\parth\\Browser_WebDrivers\\chromedriver-win64\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
@@ -38,12 +38,14 @@ public class AdvanceOperatios {
 	
 		Actions act = new Actions(driver);
 		WebElement btnPointMe = driver.findElement(By.className("dropbtn"));
+		WebElement btnCopyText = driver.findElement(By.xpath("//button[text()='Copy Text']"));
 		WebElement srcDrag = driver.findElement(By.id("draggable"));
 		WebElement dstDrop = driver.findElement(By.id("Droppable"));
 		
 		act.dragAndDrop(srcDrag, dstDrop).perform();
-//		act.moveToElement(btnPointMe).perform();
-//		act.contextClick(btnPointMe).perform();
+		act.moveToElement(btnPointMe).perform();
+		act.contextClick(btnPointMe).perform();
+		act.doubleClick(btnCopyText).perform();
 		
 		
 		
